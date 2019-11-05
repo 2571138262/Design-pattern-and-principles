@@ -131,5 +131,8 @@
     
 ##### 源码中的建造者举例
     1、StringBuilder 
-    2、
+    2、Google guava开源库 中Immutable
+    3、Spring框架中 BeanDefinitionBuilder
+    4、mybatis框架中 sqlSessionFactoryBuilder
+    
     
