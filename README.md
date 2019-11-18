@@ -197,3 +197,42 @@
 
 #### 单例 - 反射攻击
 #### 通过枚举实现单例， 既能防止序列化破坏又能防止反射攻击
+#### 基于ThreadLocal的线程单例
+    它并不能保证对象在整个应用全局唯一， 但是能保证对象线程唯一
+    对于 多线程同步阻塞： 时间换空间
+         ThreadLocal： 空间换时间
+         
+#### 源码中单例模式的应用
+    java.lang.Runtime
+        private static Runtime currentRuntime = new Runtime();
+    java.awt.Desktop
+    Spring中的单例是基于容器的
+        AbstractFactoryBean:
+            public final T getObject() throws Exception {
+                    if (this.isSingleton()) {
+                        return this.initialized ? this.singletonInstance : this.getEarlySingletonInstance();
+                    } else {
+                        return this.createInstance();
+                    }
+                }
+    Mybatis中单例的使用
+        ErrorContext
+### 原型模式
+##### 定义：指原型实例指定创建对象的种类，并通过拷贝这些原型创建新的对象(在内存中进行二进制流的拷贝)
+##### 特点：不需要知道任何创建的细节，不调用构造函数
+##### 类型：创建型
+#### 原型 - 适用场景
+##### 1、类初始化消耗较多资源
+##### 2、new产生的一个对象需要非常繁琐的过程(数据准备、访问权限等)
+##### 3、构造函数比较复杂
+##### 4、循环体中生产大量对象时
+#### 原型 - 优点
+##### 1、原型模式性能比直接new一个对象性能高
+##### 2、简化创建过程
+#### 原型 - 缺点
+##### 1、必须配备克隆方法
+##### 2、对克隆复杂对象或对克隆出的对象进行复杂改造是，容易引入风险
+##### 3、深拷贝、浅拷贝要运用得当
+#### 原型 - 扩展
+##### 1、深克隆
+##### 2、浅克隆

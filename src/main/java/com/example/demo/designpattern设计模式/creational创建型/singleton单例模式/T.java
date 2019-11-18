@@ -8,7 +8,10 @@ public class T implements Runnable {
 
 //        LazyDoubleCheckSingleton instance = LazyDoubleCheckSingleton.getInstance();
 
-        StaticInnerClassSingleton instance = StaticInnerClassSingleton.getInstance();
+//        StaticInnerClassSingleton instance = StaticInnerClassSingleton.getInstance();
+
+        ThreadLocalInstance instance = ThreadLocalInstance.getInstance();
+
         System.out.println(Thread.currentThread().getName() + "     " + instance);
     }
 }

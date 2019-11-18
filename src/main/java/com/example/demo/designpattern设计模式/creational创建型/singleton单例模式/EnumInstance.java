@@ -2,8 +2,13 @@ package com.example.demo.designpattern设计模式.creational创建型.singleton
 
 public enum EnumInstance {
 
-    INSTANCE;
+    INSTANCE{
+        protected void printTest(){
+            System.out.println("Thorn Print Test");
+        }
+    };
 
+    protected abstract void printTest();
     private Object data;
 
     public Object getData() {
