@@ -11,9 +11,11 @@ public class Test {
         System.out.println(pig1);
         System.out.println(pig2);
 
-        pig1.getBirthday().setTime(6666666L);
+        pig1.getBirthday().setTime(66666666666666L);
         System.out.println(pig1);
         System.out.println(pig2);
+
+        System.out.println(pig1 == pig2);
     }
 
 }

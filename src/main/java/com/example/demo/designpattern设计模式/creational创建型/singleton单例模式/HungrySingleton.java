@@ -7,7 +7,7 @@ import java.io.Serializable;
  *      在类加载的时候就初始化
  *      缺点是如果这个类始终没有用过，就会造成内存的浪费
  */
-public class HungrySingleton implements Serializable {
+public class HungrySingleton implements Serializable, Cloneable {
 
     private final static HungrySingleton hungrySingleton;
 
@@ -31,5 +31,18 @@ public class HungrySingleton implements Serializable {
      */
     private Object readResolve(){
         return hungrySingleton;
+    }
+
+
+    /**
+     * 原型模式 -- 破坏单例测试
+     *      避免克隆破坏 1、不要继承Cloneable接口
+     *                 2、如果实现了Cloneable， 那么重写clone()方法，直接调用getInstance()方法
+     * @return
+     * @throws CloneNotSupportedException
+     */
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return getInstance();
     }
 }

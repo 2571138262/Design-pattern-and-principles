@@ -12,12 +12,12 @@ public class Pig implements Cloneable{
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-//        Pig pig = (Pig)super.clone();
-//
-//        // 深克隆
-//        pig.birthday = (Date) pig.birthday.clone();
-//        return pig;
-        return super.clone();
+        Pig pig = (Pig)super.clone();
+
+        // 深克隆
+        pig.birthday = (Date) pig.birthday.clone();
+        return pig;
+//        return super.clone();
     }
 
     public Pig() {
