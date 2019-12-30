@@ -15,7 +15,6 @@ public class Test {
         Question question = new Question();
         question.setUserName("Thorn");
         question.setQuestionContent("Java主函数如何编写");
-        
         course.produceQuestion(course, question);
     }
     

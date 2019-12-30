@@ -5,7 +5,8 @@ import com.google.common.eventbus.EventBus;
 public class GuavaEventTest {
 
     public static void main(String[] args) {
-        // 创建了一个事件总线
+        // 创建了一个事件总线 
+        // EventBus Guava 提供的实现观察者的核心类
         EventBus eventBus = new EventBus();
         GuavaEvent guavaEvent = new GuavaEvent();
         eventBus.register(guavaEvent);
