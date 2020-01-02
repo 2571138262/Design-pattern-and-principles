@@ -24,7 +24,7 @@ public class Test {
 //        
 //        if (StringUtils.equals(promotionKey, "LIJIAN")){
 //            promotionActivity = new PromotionActivity(new LiJianPromotionStrategy());
-//        }else if (StringUtils.equals(promotionKey, "FANXIAN")){
+//        }else if (StringUtils.equals(promotionKey, "FANXIAN")){  
 //            promotionActivity = new PromotionActivity(new FanXianPromotionStrategy());
 //        }// ......
 //        promotionActivity.executePromotionStrategy();
